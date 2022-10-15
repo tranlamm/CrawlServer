@@ -118,7 +118,7 @@ const jobController = {
         const skills = [];
         const { urls, names } = await jobController.getAllSkillName();
         try {
-            for (let i = 0; i < 77; i++) {
+            for (let i = 0; i < 30; i++) {
                 const { data } = await axios.get(urls[i]);
                 const $ = cheerio.load(data);
                 const amount = $('.search-page__jobs .search-page__jobs-inner #jobs > h1').text().trim().split(' ')[0];
